@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
+
+html{
+    background-color: #C4B5FD;
+    color: #6D28D9;
+}
+
+body{
+    margin: auto;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: larger;
+    max-width: 600px;
+}
+.input #date-of-birth{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+.input #lucky-number{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+#output{
+    margin: 1rem;
+}
+#btn-check{
+    font-family: 'Raleway', sans-serif;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #C4B5FD;
+    color: #6D28D9;
+    border-color: #6D28D9;
+    border-radius: 0.5rem;
+}
