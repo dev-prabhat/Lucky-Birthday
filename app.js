@@ -5,19 +5,19 @@ var btnOutput = document.querySelector("#output")
 
 function addNumber(dob) {
     dob = dob.replaceAll("-", "")
+    dob = [...dob]
     let sum = 0;
-    for (let i = 0; i < dob.length; i++)
-        sum = sum + Number(dob.charAt(i));
+    sum = dob.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue
+    }, 0)
     return sum
 }
 
 function isYourBirthdayLucky(dob, luckyNumber) {
     if (dob % luckyNumber.value === 0)
         btnOutput.innerText = "Yeah your Birthday is Lucky 🎉"
-    else if (dob && luckyNumber.value)
-        btnOutput.innerText = "Please Enter in the respected field"
     else
-        btnOutput.innerText = "Bad Lucky , No Lucky Birthday 😞"
+        btnOutput.innerText = "Bad Luck , No Lucky Birthday 😞"
 }
 
 function EventHandler() {
@@ -25,7 +25,6 @@ function EventHandler() {
     var sum = addNumber(dob);
 
     isYourBirthdayLucky(sum, luckyNumber)
-
 }
 
 btnCheck.addEventListener("click", EventHandler)
