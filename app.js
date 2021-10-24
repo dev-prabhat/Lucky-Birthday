@@ -6,10 +6,12 @@ var btnOutput = document.querySelector("#output")
 function addNumber(dob) {
     dob = dob.replaceAll("-", "")
     dob = [...dob]
+    // console.log(dob)
     let sum = 0;
     sum = dob.reduce(function (previousValue, currentValue) {
-        return previousValue + currentValue
+        return previousValue + Number(currentValue)
     }, 0)
+    // console.log(sum)
     return sum
 }
 
