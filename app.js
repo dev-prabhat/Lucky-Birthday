@@ -1,9 +1,9 @@
-var dateOfBirth = document.querySelector("#date-of-birth")
-var luckyNumber = document.querySelector("#lucky-number")
-var btnCheck = document.querySelector("#btn-check")
-var btnOutput = document.querySelector("#output")
+const dateOfBirth = document.querySelector("#date-of-birth")
+const luckyNumber = document.querySelector("#lucky-number")
+const btnCheck = document.querySelector("#btn-check")
+const btnOutput = document.querySelector("#output")
 
-function addNumber(dob) {
+const addNumber = (dob) => {
     dob = dob.replaceAll("-", "")
     dob = [...dob]
     // console.log(dob)
@@ -15,14 +15,14 @@ function addNumber(dob) {
     return sum
 }
 
-function isYourBirthdayLucky(dob, luckyNumber) {
+const isYourBirthdayLucky = (dob, luckyNumber) => {
     if (dob % luckyNumber.value === 0)
         btnOutput.innerText = "Yeah your Birthday is Lucky 🎉"
     else
         btnOutput.innerText = "Bad Luck , No Lucky Birthday 😞"
 }
 
-function EventHandler() {
+const EventHandler = () => {
     var dob = dateOfBirth.value;
     var sum = addNumber(dob);
 
